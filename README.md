@@ -48,7 +48,7 @@ It is **receive-only**: it never transmits, replays or jams anything, and it doe
 - **Export** writes the inventory as CSV and JSON. Every transmission and new-device event is appended as one **JSON Lines** record to `%APPDATA%\KG5ZZB-IoT-RF-Inventory\events.jsonl`, ready for a SIEM, a log shipper or a script.
 
 ### 🎬 Try it without hardware
-**Try the demo** (or start with `--demo`) simulates a building on 433.92 MHz: two weather sensors (PPM and PWM), a door/window sensor, a garage-remote-style transmitter, a tire-pressure-style FSK sensor, an energy-monitor-style Manchester sensor and two LoRa nodes. The app learns them for 60 seconds; at 75 seconds an **unknown FSK device** switches on and is flagged. The demo also has devices on 315, 868 and 915 MHz.
+**Try the demo** (or start with `--demo`) plays a built-in building scenario on 433.92 MHz: two weather sensors (PPM and PWM), a door/window sensor, a garage-remote-style transmitter, a tire-pressure-style FSK sensor, an energy-monitor-style Manchester sensor and two LoRa nodes. The app learns them for 60 seconds; at 75 seconds an **unknown FSK device** switches on and is flagged. The demo also has devices on 315, 868 and 915 MHz.
 
 ---
 
@@ -88,7 +88,7 @@ Per-class precision/recall, the confusion matrix and the method details are in *
 | Machine learning | Dataset generation, PyTorch training, ONNX export and inference, rule baseline; DBSCAN, k-means, adjusted Rand index, purity |
 | Inventory | Fingerprints, online device matching and clustering, intervals, new-device alerts, CSV / JSON export and reload, JSON Lines event log |
 | Pipeline | One capture in, classified and decoded transmissions out (shared by app, demo, tests and tools) |
-| Simulation | OOK line encoders, FSK / LoRa / OOK synthesis, device models, demo scenario, simulated dongle |
+| Demo engine | OOK line encoders, FSK / LoRa / OOK generation, device models, demo scenario, demo dongle |
 | UI | WPF: status banner, waterfall with classified ticks, alerts, editable device table, transmission log |
 
 ## Requirements
